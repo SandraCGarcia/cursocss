@@ -7,21 +7,27 @@ Dark green: #28b485
 
 */
 
-* {
-  /* estilos globales de la web */
+*,
+*::after,
+*::before {
+  /* estilos globales de todos los elementos de la web */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit; /* todos los elementos de la web se fuerzan a heredar la propiedad bordex-box ya que esta no es heredable por si misma */
 }
 
+html {
+  font-size: 62.5%;
+}
 body {
   /* estilos globales del body */
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /*font-size: 16px;*/
   line-height: 1.7; /* es 1.7 veces mayor que el alto de línea original */
   color: #777;
-  padding: 30px;
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -40,8 +46,8 @@ body {
 
 .logo {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
   transition: opacity 1s ease;
   cursor: pointer;
 }
@@ -51,7 +57,7 @@ body {
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .text-box {
@@ -67,14 +73,14 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden; /* elinima el efecto de sacudida hacia arriba de la animación
   */
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
   display: block;
   font-weight: 400;
-  font-size: 60px;
-  letter-spacing: 35px;
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
   animation: moveInLeft 1s ease-out;
 
   /*
@@ -85,19 +91,19 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700px;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.75rem;
   animation: moveInRight 1s ease-out;
 }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   100% {
     opacity: 1;
@@ -108,10 +114,10 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   100% {
     opacity: 1;
@@ -125,21 +131,22 @@ body {
   */
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s ease;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* el primer valor es el desplazamiento direccion X, el segundo valor es el desplazamiento en Y, en tercer valor es el radio de desenfoque y el último es el color */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); /* el primer valor es el desplazamiento direccion X, el segundo valor es el desplazamiento en Y, en tercer valor es el radio de desenfoque y el último es el color */
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -152,7 +159,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
