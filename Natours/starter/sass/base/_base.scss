@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+  /* estilos globales de todos los elementos de la web */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* todos los elementos de la web se fuerzan a heredar la propiedad bordex-box ya que esta no es heredable por si misma */
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+}
