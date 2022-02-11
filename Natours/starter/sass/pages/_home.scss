@@ -13,4 +13,22 @@
     ),
     url(../img/nat-4.jpg);
   background-size: cover;
+
+  transform: skewY(-7deg);
+  margin-top: -12rem;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+// para efecto tarjetas usar el selector universal y añadir transform: skewY(0); a los texto e icono
+// & * {
+//    transform: skewY(7deg);
+//  }
+
+.section-tours {
+  background-color: $color-gray-light-1;
+  padding: 25rem 0 50rem 0;
+  margin-top: -12rem;
 }
